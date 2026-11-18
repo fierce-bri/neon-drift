@@ -1,0 +1,55 @@
+{
+  "renderer": "ANGLE (NVIDIA, Vulkan 1.3.289 (NVIDIA NVIDIA L4 (0x000027B8)), NVIDIA)",
+  "checks": {
+    "loaded": {
+      "level": "PASS",
+      "ok": true,
+      "why": ""
+    },
+    "gpu": {
+      "level": "PASS",
+      "ok": true,
+      "why": "ANGLE (NVIDIA, Vulkan 1.3.289 (NVIDIA NVIDIA L4 (0x000027B8)), NVIDIA)"
+    },
+    "no_errors": {
+      "level": "PASS",
+      "ok": true,
+      "why": ""
+    },
+    "smooth": {
+      "level": "FAIL",
+      "ok": false,
+      "why": "median 59.9 fps, 15.7% of 822 frames over 25 ms, 0 over 100 ms, worst 100 ms; slowest at 19.7 s (100 ms), 19.6 s (83 ms), 19.8 s (83 ms)"
+    },
+    "headroom": {
+      "level": "NOTE",
+      "ok": true,
+      "why": "median 5.2 ms a frame with the 60 Hz cap off (p95 8.8 ms), 3.2 times the 60 fps budget: but real play missed frames (see smooth), so the cost is where an uncapped run does not show it; add none until smooth passes"
+    },
+    "exposure": {
+      "level": "PASS",
+      "ok": true,
+      "why": ""
+    },
+    "not_frozen": {
+      "level": "PASS",
+      "ok": true,
+      "why": "up to 12.6% of the picture changed between stills"
+    },
+    "state_changes": {
+      "level": "PASS",
+      "ok": true,
+      "why": "getState() first vs last"
+    },
+    "player_moves": {
+      "level": "PASS",
+      "ok": true,
+      "why": "moved 596.4 units in 20.0 s"
+    }
+  },
+  "headroom": {
+    "frames": 691,
+    "median_ms": 5.2,
+    "p95_ms": 8.8
+  }
+}

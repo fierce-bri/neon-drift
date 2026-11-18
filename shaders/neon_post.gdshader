@@ -3,7 +3,7 @@ shader_type canvas_item;
 // bloom (thresholded multi-tap blur), chromatic aberration, vignette,
 // faint scanlines and a red damage flash. Runs on the Compatibility renderer.
 
-uniform sampler2D screen_tex : hint_screen_texture, filter_linear_mipmap;
+uniform sampler2D screen_tex : hint_screen_texture, filter_linear;
 uniform float bloom_strength : hint_range(0.0, 4.0) = 2.2;
 uniform float bloom_threshold : hint_range(0.0, 1.0) = 0.22;
 uniform float bloom_radius = 6.0;
@@ -29,13 +29,15 @@ void fragment() {
 
 	vec3 bloom = vec3(0.0);
 	float total = 0.0;
-	for (int ring = 1; ring <= 3; ring++) {
-		float r = float(ring) * bloom_radius;
+	// Non-mipmapped taps: sampling screen-texture mip levels triggers
+	// incomplete-framebuffer errors on Godot 4.3's WebGL 2 backend.
+	for (int ring = 1; ring <= 4; ring++) {
+		float r = float(ring) * bloom_radius * 0.75;
 		float w = 1.0 / float(ring);
-		for (int i = 0; i < 8; i++) {
-			float a = float(i) * 0.785398 + float(ring) * 0.39;
+		for (int i = 0; i < 10; i++) {
+			float a = float(i) * 0.628319 + float(ring) * 0.39;
 			vec2 off = vec2(cos(a), sin(a)) * r * px;
-			bloom += bright(textureLod(screen_tex, uv + off, float(ring)).rgb) * w;
+			bloom += bright(texture(screen_tex, uv + off).rgb) * w;
 			total += w;
 		}
 	}
