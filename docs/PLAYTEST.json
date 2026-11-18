@@ -1,0 +1,45 @@
+{
+  "url": "https://neon-drift-aphiwe.abacusai.cloud/",
+  "checks": [
+    {
+      "name": "boot",
+      "pass": true,
+      "detail": "{'best': 0, 'enemies': 0, 'fps': 1, 'hp': 0, 'multiplier': 1, 'muted': False, 'paused': False, 'player': [], 'score': 0, 'state': 'TITLE', 'wave': 0}"
+    },
+    {
+      "name": "start",
+      "pass": true,
+      "detail": "{'best': 0, 'enemies': 0, 'fps': 2, 'hp': 5, 'multiplier': 1, 'muted': False, 'paused': False, 'player': [640, 360], 'score': 0, 'state': 'PLAYING', 'wave': 0}"
+    },
+    {
+      "name": "move_right",
+      "pass": true,
+      "detail": "640 -> [869.500732421875, 360]"
+    },
+    {
+      "name": "gameplay",
+      "pass": true,
+      "detail": "{'best': 0, 'enemies': 0, 'fps': 2, 'hp': 3, 'multiplier': 1, 'muted': False, 'paused': False, 'player': [885.379760742188, 220.142761230469], 'score': 1150, 'state': 'PLAYING', 'wave': 1}"
+    },
+    {
+      "name": "pause",
+      "pass": true,
+      "detail": "{'best': 0, 'enemies': 0, 'fps': 2, 'hp': 3, 'multiplier': 1, 'muted': False, 'paused': True, 'player': [885.379760742188, 220.142761230469], 'score': 1150, 'state': 'PAUSED', 'wave': 1}"
+    },
+    {
+      "name": "resume",
+      "pass": true,
+      "detail": "{'best': 0, 'enemies': 0, 'fps': 2, 'hp': 3, 'multiplier': 1, 'muted': False, 'paused': False, 'player': [885.379760742188, 220.142761230469], 'score': 1150, 'state': 'PLAYING', 'wave': 1}"
+    },
+    {
+      "name": "mute_toggle",
+      "pass": true,
+      "detail": "{'best': 0, 'enemies': 0, 'fps': 1, 'hp': 3, 'multiplier': 1, 'muted': True, 'paused': False, 'player': [885.379760742188, 220.142761230469], 'score': 1150, 'state': 'PLAYING', 'wave': 1}"
+    },
+    {
+      "name": "no_errors",
+      "pass": true,
+      "detail": "[]"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/chaser.gd" id="1"]
+
+[node name="MiniChaser" type="Area2D"]
+script = ExtResource("1")
+max_hp = 1
+speed = 215.0
+radius = 9.0
+points = 50
+color = Color(1, 0.55, 0.2, 1)
+knockback = 300.0
+enemy_name = "mini_chaser"

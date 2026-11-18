@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/splitter.gd" id="1"]
+
+[node name="Splitter" type="Area2D"]
+script = ExtResource("1")
+max_hp = 6
+speed = 80.0
+radius = 25.0
+points = 300
+color = Color(1, 0.5, 0.15, 1)
+knockback = 60.0
+enemy_name = "splitter"
