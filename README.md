@@ -8,8 +8,6 @@
 
 Survive escalating waves of geometric enemies. Chain kills quickly to build a combo multiplier and beat your best score. Every sound is generated procedurally, and all the visuals are vector shapes drawn in code under a custom bloom post-processing shader.
 
-Made by **Aphiwe Mzulwini** · [github.com/fierce-bri](https://github.com/fierce-bri)
-
 ---
 
 ## Controls
